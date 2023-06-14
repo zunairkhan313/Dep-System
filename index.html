@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+ /* Button */
+ .btn {
+  border: 2px solid black;
+  
+   background-image: linear-gradient(to right, #4888c0 , #5ecdde);
+  color: black;
+  padding: 14px 28px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Green */
+.light {
+  border-color: #1f89ba ;
+  color: white;
+}
+
+.light:hover {
+   background-image: linear-gradient(to left, #4888c0 , #5ecdde);
+  color: white;
+}
+
+  /* Button */
+
+
+
+
+      .nav-item{
+        font-family: 'san-franciso';
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      li{
+        padding: 10px;
+       
+        
+      }
+     nav .navbar-nav .nav-item li a {
+        color: #f1917f;
+      }
+      a:hover{
+        color: #fff;
+    text-decoration: none;
+      }
+
+.buto{
+  display: inline-block;
+    color: #888;
+    letter-spacing: .3px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1;
+}
+
+
+    
+    
+
+
+
+      p{
+        font-family: 'Poppins', sans-serif; 
+       }
+
+
+      h1 h2 h3 h5 h4 h5{font-family:'IBM Plex Serif', serif;
+    font-weight: 400;}
+     
+  
+     
+
+
+
+/* transitions */
+
+    .light {
+  position: relative;
+  background-image: linear-gradient(to left, #4888c0 , #5ecdde);
+  z-index: 1;
+}
+
+.light::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #4888c0 , #5ecdde);
+  z-index: -1;
+  transition: opacity 0.2s linear;
+  opacity: 0;
+}
+.light:hover::before {
+  opacity: 1;
+  color: white;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+#aa {
+  background-color:#1d87b9;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 5px;
+}
+#bb{
+  background-color:#1d87b9;
+  color: white;
+  
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 5px;
+}
+#cc{
+  background-color:#1d87b9;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 5px;
+}
+/* #dd{
+  background-color:#1d87b9;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 5px;
+} */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  border: none;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+    
+    </style>
+    <title>HOME</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  </head>
+  <body  class="container-fluid"> 
+      
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+
+
+ <div class="row" style=" position: sticky; top: 0px;z-index: 99; font-family:'IBM Plex Serif', serif;">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="padding: 10px;  background: linear-gradient(to right, #1f89ba , #5ecdde); font-weight: bold;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> <img src="./abc.png" style="height: 70px;"/> Dep System </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html" class="home">HOME</a>
+          </li>
+          <li class="nav-item" style="font-family: 'Rubik', sans-serif;">
+            <a class="nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">CONTACT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="doctor.html">DOCTOR</a>
+          </li>
+          <li>
+            <button id="bb" onclick="document.getElementById('id01').style.display='block'" style="width:auto;padding: 5px;font-size: 15px;background-color: #1d9ab9ab;border-radius: 8px;padding-right: 15px;padding-left: 15px;">Login</button>
+
+<div  id="id01" class="modal">
+  
+  <form style="width: 500px;margin: auto;" class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+   
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button id="cc" type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button style="border: none;color: white;" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+          </li>
+          <!-- <li class="nav-item dropdown" >
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              VIRUSES
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              
+              <li ><a class="dropdown-item" href="covid-19.html" style="color: #1f89ba;">COVID-19</a></li>
+              <li><a class="dropdown-item" href="polio.html" style="color: #1f89ba;">POLIO</a></li>
+              <li><a class="dropdown-item" href="fever.html" style="color: #1f89ba;">FEVER</a></li>
+              <li><a class="dropdown-item" href="ch-pox.html" style="color: #1f89ba;">CHICKENPOX</a></li>
+            </ul>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+ </div>
+
+      <div style="background-image: linear-gradient(to right, #1f89ba , #5ecdde);height: 700px; font-family: 'Rubik', sans-serif;color: #fff;" class="row">
+       
+        <div class="col-md-6 col-xs-12" style="padding: 100px; ">
+          
+          <h2  style="font-family:'IBM Plex Serif', serif;"><b>ARE YOU DEPRESSED? WE CAN HELP YOU. </b></h2>
+          <br>
+          <p style="font-family: sans-serif">Depression is a mood disorder that generally brings about sadness, but it can also influence a person’s energy, motivation, irritability, and overall well-being. It is one of the most powerful mental health conditions a person can endure. The numerous depressive disorders differ based on the types of symptoms as well as their frequency, intensity, duration, and triggers.</p>
+
+  <br>
+
+  
+ <a href="contactus.html"><button type="button" class="btn light" style="  font-family: 'Rubik', sans-serif; color: white;" >CONTACT US</button> </a> 
+      </div>
+<div class="col-md-6 col-xs-12" >
+    <img height="500px" style="margin-left: 80px;"  src="./xx.png" alt=""  class="img-responsive">
+
+</div>
+      </div>
+      
+      
+      
+      
+      
+      <br><br>
+
+    <div class="row">
+    <div class="col-xs-12 col-md-6 "> 
+      <img width="300px" src="./images-removebg-preview.png"  alt="..." class="img-responsive" style="margin-left: 40px;">
+    </div>
+    <div class="col-md-6" style="padding: 40px;"> 
+      <h3 style="font-family:'IBM Plex Serif', serif;">
+        WHAT IS DEPRESSION?
+      </h3>
+
+     <p>
+     Depression is a mood disorder that generally brings about sadness, but it can also influence a person’s energy, motivation, irritability, and overall well-being. It is one of the most powerful mental health conditions a person can endure. The numerous depressive disorders differ based on the types of symptoms as well as their frequency, intensity, duration, and triggers.
+     </p>
+      
+   
+    
+    </div>
+    </div>
+    
+    
+    
+    <br>
+    <!-- <H1 style="text-align: center;color: black;font-family:'IBM Plex Serif', serif;"> HOW VIRUSES SPREAD </H1><br>
+
+    <div class="row container-fluid justify-content-center" style="">
+    <div class="col-4" style="height: 300px;width: 300px;border: #1f89ba solid;box-shadow: #f1917f 10px 10px;">
+      <img src="image/1.png" alt="" style="margin-left: 85px;margin-top: 20PX;margin-bottom: 20px;">
+    <h5 style="text-align: center;margin-bottom: 10px;font-family:'IBM Plex Serif', serif;">HUMAN CONTACT</h5>
+    <p style="text-align: center;margin-top: 10px;font-family:'IBM Plex Serif', serif;"> People may also become infected when touching their eyes, nose or mouth after touching surfaces or objects that have been contaminated by the virus. </p>
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="col-4" style="height: 300px;width: 300px;border: #1f89ba solid;box-shadow: #f1917f 10px 10px;">
+      <img src="image/2.png" alt="" style="margin-left: 75px;margin-top: 20PX;margin-bottom: 20px;">
+      <h5 style="text-align: center;margin-bottom: 10px;font-family:'IBM Plex Serif', serif;">AIR TRANSFORMATION</h5>
+      <p style="text-align: center;margin-top: 10px;font-family:'IBM Plex Serif', serif;"> he virus can also spread in poorly ventilated and/or crowded indoor settings,This is because aerosols can remain suspended in the air.</p>
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="col-4" style="height: 300px;width: 300px;border: #1f89ba solid;box-shadow: #f1917f 10px 10px;">
+      <img src="image/3.png" alt="" style="margin-left: 85px;margin-top: 20PX;margin-bottom: 20px;">
+      <h5 style="text-align: center;margin-bottom: 10px;font-family:'IBM Plex Serif', serif;">CONTAIMENATED OBJECT </h5>
+      <p style="text-align: center;margin-top: 10px;font-family:'IBM Plex Serif', serif;">Infection can also spread through contaminated water or food. Such examples are called indirect contact infections.</p>
+    </div>
+    </div> <br><br>
+
+
+
+<div style="background-color: #f3fffe;">
+<div class="row" >
+  
+   <div class="col-6" > 
+
+    <h3  style="color: #1f89ba;margin-left:  50px; font-family:'IBM Plex Serif', serif;">FEW VIRUSES THAT HAS CAUSED HUGE DEMAGE IN PAST</h3>
+<P style="margin-left:  50px;">Humans have been fighting viruses long before our species had even evolved into its modern form. For some viral diseases, vaccines and antiviral drugs have allowed us to keep infections from spreading widely, and have helped sick people recover. <br>
+few common viruses are listed bellow!!</P>
+     <div class="row" >
+  <div class="col-6">
+ <a href="covid-19.html">  <p class="btn" style="margin-top: 40px;background: linear-gradient(to right, #457dbc 0%, #59c7db 100%);
+  color: #fff;width: 100%;height: 60px;margin-left:  40px;font-family:'IBM Plex Serif', serif;"> <SPan style="margin-top: 30px;">COVID-19</SPan>  </p></a> 
+  
+  <br>
+  <a href="ch-pox.html"><p class="btn" style="margin-top: 10px;background: linear-gradient(to right, #457dbc 0%, #59c7db 100%);
+  color: #fff;width: 100%;height: 60px;margin-left:  40px;font-family:'IBM Plex Serif', serif;"> <B> CHICKEN POX</B>  </p></a>  <br>
+  <a href="fever.html"><p class="btn" style="margin-top: 10px;background: linear-gradient(to right, #457dbc 0%, #59c7db 100%);
+  color: #fff;width: 100%;height: 60px;margin-left:  40px;font-family:'IBM Plex Serif', serif;"> <B>HOT FEVER</B> </p></a>
+  
+ </div>
+  <div class="col-6">
+    <p class="btn" style="margin-top: 40px;background: linear-gradient(to right, #457dbc 0%, #59c7db 100%);
+  color: #fff;width: 100%;height: 60px;margin-left:  40px;font-family:'IBM Plex Serif', serif;"> <B>SPANISH FLUE </B> </p> <br>
+  <p class="btn" style="margin-top: 10px;background: linear-gradient(to right, #457dbc 0%, #59c7db 100%);
+  color: #fff;width: 100%;height: 60px;margin-left:  40px;font-family:'IBM Plex Serif', serif;"> <B>SMALL POX</B> </p> <br>
+  <a href="polio.html"><p class="btn" style="margin-top: 10px;background: linear-gradient(to right, #457dbc 0%, #59c7db 100%);
+  color: #fff;width: 100%;height: 60px;margin-left:  40px;font-family:'IBM Plex Serif', serif;"> <B>POLIO</B> </p></a>
+  
+ </div>
+</div>
+</div>
+
+   
+    <div class="col-6">
+  <img src="image/i3.png" alt="" style="width: 100%;height:710px;">
+
+    </div>
+  </div>
+</div>
+</div><br><br> -->
+
+
+
+
+
+
+<div >
+<h1 style="text-align: center;color: #59c7db;font-family:'IBM Plex Serif', serif;">Prevention  Depressions</h1>
+<H2 style="text-align: center;color: black;font-family:'IBM Plex Serif', serif;"> How To Stay Safe Important Precautions</H2><br>
+
+
+<div class="row container-fluid justify-content-center">
+  <div class="col-6" style="height: 550px;width: 550px;border: #f1917f solid;box-shadow: #f1917f 10px 10px;">
+    <h5 style="text-align: center; margin-top: 20px;"> <b style="background: linear-gradient(to right, #f980a1 0%, #e0644c 100%);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 27px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 35px;">
+    <b  style="font-family:'IBM Plex Serif', serif;"> Things Not To Do</b></b>  </h5>
+    <br>
+
+    <div class="row">
+      <div class="col-3">
+        
+        <img src="./e.png" alt=""  style="height: 100px;margin-left: 20px">
+       
+      </div>
+        
+    <div class="col-9">
+      <h1 style="color: #457dbc;font-size: medium;margin-left: 6px;font-family:'IBM Plex Serif', serif;"><b>DO NOT OVERTHINKING</b> </h1>
+      <p style="margin: 5px;font-family:'IBM Plex Serif', serif;" > Medical advisors has reminded us time and again not to touch our face, nose and mouth too often.</p>
+    </div>
+
+    <div class="col-3">
+      <img src="./sleeep.png" alt=""  style="height: 60px;margin-left: 40px;margin-top: 10px;"></div>
+  <div class="col-9">
+    <h1 style="color: #457dbc;font-size: medium;margin-left: 6px;margin-top: 7px;font-family:'IBM Plex Serif', serif;"> <b>DON'T SLEEP TOO MUCH</b> </h1>
+    <p style="margin: 5px;padding-top: 3px;;font-family:'IBM Plex Serif', serif;" >Lorem ipsum dolor sit amet,  consectetur adipisicing  sed do eiusm tempor incididunt ut.</p></div>
+  
+  <div class="col-3">
+    <img src="./d.png" alt=""  style="height:90px;margin-left: -20px; margin-top: 6px;"></div>
+<div class="col-9"> 
+  <h1 style="color: #457dbc;font-size: medium;margin-left: 6px;margin-top: 15px;font-family:'IBM Plex Serif', serif;"> <b>DO NOT EAT BAD FOODS</b> </h1>
+  <p style="margin: 5px;padding-top: 5px;margin-bottom: 10px;font-family:'IBM Plex Serif', serif;" >Lorem ipsum dolor sit amet,  consectetur adipisicing  sed do eiusm tempor incididunt ut.</p></div>
+
+<div class="col-3">
+  <img src="./antibiotics_-removebg-preview.png" alt=""  style="height: 70px;margin-left: 20px;margin-top: 15px;"></div>
+<div class="col-9">
+  <h1 style="color: #457dbc;font-size: medium;margin-left: 7px;margin-top: 10px;font-family:'IBM Plex Serif', serif;"> <b>DON'T TAKE DRUGS</b> </h1>
+  <p style="margin: 5px;padding-top: 5px;margin-bottom: 10px;font-family:'IBM Plex Serif', serif;" >Lorem ipsum dolor sit amet,  consectetur adipisicing  sed do eiusm tempor incididunt ut.</p></div>
+
+
+
+
+
+</div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <div class="col-6" style="height: 550px;width: 550px;border: #59c7db solid;box-shadow: #59c7db 10px 10px;">
+    <h5 style="text-align: center; margin-top: 20px;"> <b style="background: linear-gradient(to right, #1d87b9 0%, #61d0e0 100%);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 27px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 35px;">
+     <b  style="font-family:'IBM Plex Serif', serif;"> Things You Should Do</b></b> </h5>
+     <br>
+     <div class="row">
+      <div class="col-3">
+        <img src="./stay_act-removebg-preview.png" alt=""  style="height: 70px;margin-left: 10px;margin-top: 10px;"></div>
+    <div class="col-9">
+      <h1 style="color: black;font-size: medium;margin-left: 7px;margin-top: 10px;font-family:'IBM Plex Serif', serif;"> <b>STAY ACTIVE</b> </h1>
+       <p style="margin: 5px;font-family:'IBM Plex Serif', serif;" >It’s pretty well known that exercise is really good for both our physical and mental health. </p></div>
+   
+    <div class="col-3">
+      <img src="./chat-removebg-preview.png" alt=""  style="height: 70px;margin-left: 10px;margin-top: 10px;"></div>
+  <div class="col-9">
+    <h1 style="color: black;font-size: medium;margin-left: 7px;margin-top: 10px;font-family:'IBM Plex Serif', serif;"> <b>CHAT WITH YOUR MATES</b> </h1>
+    <p style="margin: 5px;font-family:'IBM Plex Serif', serif;" >Even if an in-person meet-up is off the table, try to stay in touch with your mates via text, Messenger, WhatsApp, OR FaceTimE.</p></div>
+
+  <div class="col-3">
+    <img src="./home made.jpg" alt=""  style="height: 70px;margin-left: 10px;margin-top: 10px;"></div>
+<div class="col-9">
+  <h1 style="color: black;font-size: medium;margin-left: 7px;margin-top: 10px;font-family:'IBM Plex Serif', serif;"> <b>MAKE A HOMEMADE DEAL</b> </h1>
+   <p style="margin: 5px;font-family:'IBM Plex Serif', serif;">Good nutrition is always important, but during stressful times there’s nothing better than a tasty, healthy homemade meal.</p></div>
+
+<div class="col-3">
+  <img src="./learn-removebg-preview.png" alt=""  style="height: 70px;margin-left: 10px;margin-top: 10px;"></div>
+<div class="col-9">
+  <h1 style="color: black;font-size: medium;margin-left: 7px;margin-top: 10px;font-family:'IBM Plex Serif', serif;"> <b>LEARN SOMETHING NEW</b> </h1>
+  <p style="margin: 5px;font-family:'IBM Plex Serif', serif;" >Have you wanted to get into drawing or learning a musical instrument? Now’s a great time to make a start.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</div>
+
+<br><br><br><br>
+
+ 
+<!-- <div style="background: linear-gradient(to right, #1d87b9 0%, #61d0e0 100%);">
+<h2 style="text-align: center;padding-bottom: 20px;padding-top: 40px;color: white;font-family:'IBM Plex Serif', serif;">ANY ADVICES FROM YOU?</h2>
+<a href="contactus.html">
+
+  <button type="button" class="btn light" style="  font-family: 'san-franciso';  padding: 10px; padding-left: 20px; padding-right: 20px; color: white;margin-left: 600px;margin-bottom: 40px;font-size: 20px;font-family:'IBM Plex Serif', serif;" > MESSAGE US</button> 
+
+</a>
+
+</div><br><br><br>
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-6 "> 
+    <img src="image/faq.jpg"  alt="..." class="img-responsive" style="width: 600px;height: 450PX;margin-left: 90px;" >
+  </div>
+  <div class="col-md-6" style="padding: 40px;"> 
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background: linear-gradient(to right, #457dbc 0%, #59c7db 100%);">
+           <span style="color: white;font-family:'IBM Plex Serif', serif;"> <B>What are the steps of the viral lifecycle??</B> </span> 
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="font-family:'IBM Plex Serif', serif;">
+            The viral life cycle can be divided into several major stages: attachment, entry, uncoating, replication, maturation, and release.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"  style="background: linear-gradient(to right, #457dbc 0%, #59c7db 100%);">
+            <span style="color: white;font-family:'IBM Plex Serif', serif;"> <B>How do viruses replicate themselves?</B> </span> 
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="font-family:'IBM Plex Serif', serif;">
+            Viruses cannot replicate on their own, but rather depend on their host cell's protein synthesis pathways to reproduce. This typically occurs by the virus inserting its genetic material in host cells, co-opting the proteins to create viral replicates, until the cell bursts from the high volume of new viral particles          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"  style="background: linear-gradient(to right, #457dbc 0%, #59c7db 100%);">
+            <span style="color: white;font-family:'IBM Plex Serif', serif;"> <B>Do viruses have a lifespan?</B> </span> 
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="font-family:'IBM Plex Serif', serif;">
+            Preventive measures include physical or social distancing, quarantining, ventilation of indoor spaces, covering coughs and sneezes, hand washing, and keeping unwashed hands away from the face. The use of face masks or coverings has been recommended in public settings to minimise the risk of transmissions.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingfour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour"  style="background: linear-gradient(to right, #457dbc 0%, #59c7db 100%);">
+            <span style="color: white;font-family:'IBM Plex Serif', serif;"> <B> When I Feel Im Defected?</B></span> 
+          </button>
+        </h2>
+        <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="font-family:'IBM Plex Serif', serif;">
+            Image result
+            The only life process a virus undergoes independently is reproduction to make copies of itself, which can only happen after they have invaded the cells of another organism. Outside of their host some viruses can still survive, depending on environmental conditions, but their life span is considerably shorter.
+          </div>
+        </div>
+      </div>
+    </div>
+</div><br><br>
+
+<div style="background-color: #f3fffe;">
+  <h2 style="text-align: center;color: #59c7db;font-family:'IBM Plex Serif', serif;">Blog Posts</h2>
+  <h3 style="text-align: center;color: black;font-family:'IBM Plex Serif', serif;">Our Most Popular Blog </h3><br><br>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" style="margin-left: 220px;">
+      <div class="card h-100">
+        <img src="image/bolg.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title" style="font-family:'IBM Plex Serif', serif;">The virus of the month:  Rhinovirus </h3>
+          <p class="card-text" style="font-family:'IBM Plex Serif', serif;">Globally, Human Rhinovirus (HRV) infections are the main cause of what we refer to as the common cold. HRV infections make up around one-half to two-thirds of common colds and are mostly seasonal, with infections peaking during the spring and/or autumn months. </p>
+        </div>
+<button type="button" class="btn light" style="  font-family: 'san-franciso';  padding: 10px; padding-left: 20px; padding-right: 20px; color: white;border: white solid 1px;font-family:'IBM Plex Serif', serif;" > <a href="blog-1.html" style="color: #f3fffe;text-decoration: none;"> READ MORE </a> </button> 
+      </div>
+    </div>
+    <div class="col" style="margin-left: 30px;">
+      <div class="card h-100" >
+        <img src="image/blog 1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title"  style="font-family:'IBM Plex Serif', serif;">The making of dengue virus: the 3′ UTR</h3>
+          
+          <p class="card-text" style="font-family:'IBM Plex Serif', serif;">In the first blog of our dengue series, we described dengue’s 5′ untranslated region (UTR) – a relative short sequence (around 100 nucleotides) that includes two elements essential for genome replication: (i) the promoter for RNA synthesis, (known as stem-loop A),</p>
+        </div>
+      <button type="button" class="btn light" style="  font-family: 'san-franciso';  padding: 10px; padding-left: 20px; padding-right: 20px; color: white;border: white solid 1px;font-family:'IBM Plex Serif', serif;" > <a href="blog-1.html" style="color: #f3fffe;text-decoration: none;"> READ MORE </a></button> 
+  
+      </div>
+    </div>
+</div><br><br>
+
+
+
+</div> -->
+
+
+
+
+<footer class="container-fluid" >
+  <div class="row " style="padding:20px; background-image: linear-gradient(to right, #1f89ba , #5ecdde);color: white;height: auto" >
+      <div class="col">
+          <div class="row">
+              <div class="col-3">
+          <img src="./abc.png" alt="">
+      </div>
+      <div class="col-9">
+          <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;padding-top: 20px;"> Dep System</h4><br>
+      </div>
+      </div>
+        
+
+
+          <h6>Dep system is a non goverment organisation</h6>
+          <p>
+            Depression is a mood disorder that generally brings about sadness, but it can also influence a person’s energy, motivation, irritability, and overall well-being.
+          </p>
+          
+
+
+      </div>
+  
+      <div class="col">
+        <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; padding-left: 30px;margin-top: 20px;">Location</h4><br>
+       <div style="padding-left: 30px;">
+        <p><i class="fa fa-caret-right"></i>   Our Center</p>
+        <p><i class="fa fa-caret-right"></i>   FUUAST Ghulshan Cumpus</p>
+        <p><i class="fa fa-caret-right"></i>   (+92) 331 0226169</p>
+        <p><i class="fa fa-caret-right"></i>   @infodepsystem.com</p>
+        
+    </div>
+    </div>
+      
+ 
+     <div class="col">
+        <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; padding-left: 80px;margin-top: 20px;">Navigate</h4><br>
+       <div style="padding-left: 80px;">
+       <p><i class="fa fa-caret-right"></i>   <a href="index.html" style="color: #f3fffe;text-decoration: none;"> Home </p></a>
+        <p><i class="fa fa-caret-right"></i>  <a href="about.html"  style="color: #f3fffe;text-decoration: none;">About</a> </p>
+        <p><i class="fa fa-caret-right"></i>  <a href="about.html"  style="color: #f3fffe;text-decoration: none;">Contact Us</a></p>
+        <p><i class="fa fa-caret-right"></i> <a href="about.html"  style="color: #f3fffe;text-decoration: none;">Doctor</a> </p>
+    </div>
+    </div>
+  
+
+  <div class="col" style="padding-left: 90px;">
+      <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;margin-left: 20px;margin-top: 20px; ">Social Contact </h4>
+    <div style="padding-right: 100px;margin-top: 30px;">
+      <ul ><i class="fa fa-facebook-square" aria-hidden="true" ></i> Facebook</ul>
+      <ul><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</ul>
+      <ul><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</ul>
+      <ul><i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp</ul>
+      
+     
+      </div>
+      
+<br>
+  </div>
+  <hr>
+  <p style="text-align: center;">All Right Reserved &copy; Dep System </p>
+
+</div>
+
+ 
+</footer>
+
+
+
+
+
+      
+
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+
+
+</body>
+</html>
